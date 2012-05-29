@@ -17,8 +17,8 @@ def runm(params):
 	print a,p
 	sigmas = np.zeros((order,order))
 	sigmasmf = np.zeros((order,order))
-	[sigmas[:,:],sigmasmf[:,:]] = coding.getMaternSampleWithSampler(phi = p, alpha = a)
-	return [(a,p),sigmas[:,:],sigmasmf[:,:]]
+	[sigmas,sigmasmf] = coding.getMaternSampleWithSampler(phi = p, alpha = a)
+	return [(a,p),sigmas,sigmasmf]
 
 
 if __name__=='__main__':

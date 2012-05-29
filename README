@@ -1,0 +1,2 @@
+Runs equilibrium stuff for population coding model with matern processes.
+Does it with multiprocessing

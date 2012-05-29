@@ -5,6 +5,7 @@ import cPickle
 import multiprocessing as mp
 from multiprocessing import Pool
 import sys
+import os
 
 order = 2
 
@@ -52,5 +53,7 @@ if __name__=='__main__':
 	fileout = open(prefix,"w+")
 	cPickle.dump(out,fileout)
 	fileout.close()
+
+	os.system("""echo "simulation is ready, dude!"|mail -s "Simulation" alexsusemihl@gmail.com""")
 
 	print "All is good with the force!"
